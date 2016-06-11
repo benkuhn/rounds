@@ -924,26 +924,26 @@
   \score {
     \transpose c d \relative c' {
       \key g \minor
-      \time 4/4
-      g'8 g g g \times 2/3 {g g g} g4 ~
-      | g^"*" c,8 c ees4 \times 2/3 {f8( ees f)}
-      | g( c bes a g4) a
-      | bes8( g ~ g2) c,4
-      | d8 ees ees4 ees r8 ees
-      | d c ees c ~ c4 r
+      \time 2/4
+      g'8 g g g | \times 2/3 {g g g} g4 ~
+      | g^"*" c,8 c | ees4 \times 2/3 {f8( ees f)}
+      | g(^"*" c bes a | g4) a
+      | bes8(^"*" g) r4 | r c,
+      | d8^"*" ees ees4 | ees r8 ees
+      | d^"*" c ees c | r2
       \bar "||"
     }
 
     \addlyrics {
       When we learn the lan -- guage of trees,
       Will we hear the sea -- sons pulse,
-      And find the heart's beat is just an e -- cho?
+      And find the heart's beat is but an e -- cho?
     }
     
     \header {
       title = "When we Learn the Language of Trees"
-      composer = "Unknown"
-      poet = "Eran? Williams"
+      composer = "Jonathan Gilbert"
+      poet = "Eran Williams"
     }
   }
 
