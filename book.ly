@@ -575,7 +575,11 @@
       d,4^"*" f | g a g( f) | e2 d ~ | d d4 a | f' e d( c) | g'2 e ~ |
       e d4 f | g a g( f) | e2 d ~ | d e4 g | a bes a g | a2 \bar "||" \break
 
-      a4^"*" a | a a a2 | g a | d,4( e) f f | a( g) f e | d2 cis |
+      % small notes down an octave
+      << { \voiceOne a4^"*" a | a a a2 | g a }
+         \new Voice { \voiceTwo \teeny a,4 a | a a a2 | g a  }
+      >> \oneVoice |
+      d4( e) f f | a( g) f e | d2 cis |
       d4 e f f | g( f) e2 | e f4 e | e d c c | d d cis2 | d \bar "|."
     }
 
