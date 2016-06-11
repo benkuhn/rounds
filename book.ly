@@ -72,7 +72,7 @@
   \markup{}
   \tocItem "All Praise to Thee"
   \score {
-    \relative c' {
+    \transpose c f \relative c' {
       \key c \major
       \time 4/4
       \partial 4 c4 | c b c c^"*" | d d e
