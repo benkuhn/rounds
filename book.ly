@@ -407,6 +407,11 @@
       Pray for the soul of Ga -- bri -- el John,
       if you please, or you may let it a -- lone, 'tis all one.
     }
+
+    \header {
+      title = "Gabriel John"
+      composer = "Henry Purcell"
+    }
   }
 
   \markup {}
