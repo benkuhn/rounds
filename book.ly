@@ -889,7 +889,7 @@
   \markup {}
   \tocItem "The Water Spout"
   \score {
-    \transpose c g \relative c' {
+    \transpose c f \relative c' {
       \key c \major
       \time 4/4
       \partial 4 g'8 g | g4 e f d8 d | e4 c d g,8 g | c c c c d d e f | e4 c d g,^"*" | \break
