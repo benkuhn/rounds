@@ -356,28 +356,6 @@
   }
 
   \markup {}
-  \tocItem "Early as I Me Walked"
-  \score {
-    \transpose c f \relative f' {
-      \key c \major
-      \time 6/4
-      g2 e4 c f e |
-      d2^"*" c4 e d c ~ |
-      c b c c f, a |
-      g2 c1 \bar "||"
-    }
-
-    \addlyrics {
-      Ear -- ly as I me walk -- ed on a May mor -- ning I heard a bird sing.
-    }
-
-    \header {
-      title = "Early as I Me Walked"
-      composer = "Traditional"
-    }
-  }
-
-  \markup {}
   \tocItem "Fie, nay Prithee, John"
   \score {
     \relative g' {
