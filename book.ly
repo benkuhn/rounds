@@ -937,8 +937,8 @@
       \key c \major
       \time 2/2
       c2 d4 c | b2 c |
-      e f4 e | d2 e |
-      c a4 f | g2 c \bar "||"
+      e^"*" f4 e | d2 e |
+      c^"*" a4 f | g2 c \bar "||"
     }
 
     \addlyrics {
