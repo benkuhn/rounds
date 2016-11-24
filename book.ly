@@ -60,7 +60,7 @@
       -- le de te lou -- er, Sei
       -- gneur, et de tres haute l'hon -- neur.
       Chan -- tez de coeur fi -- de
-      -- le, chan -- tez! 
+      -- le, chan -- tez!
     }
 
     \header {
@@ -68,7 +68,7 @@
       composer = "Traditional"
     }
   }
-  
+
   \markup{}
   \tocItem "All Praise to Thee"
   \score {
@@ -92,6 +92,31 @@
       title = "All Praise to Thee"
       composer = "Thomas Tallis"
       poet = "Thomas Ken"
+    }
+  }
+
+  \markup {}
+  \tocItem "Alleluia"
+  \score {
+    \relative c' {
+      \key a \minor
+      \time 6/8
+      d4.^"In 3 or 6 parts" a' | g c, | f8^"(*)"( e) d e4 c8 | b4 d8 g4. | a4.^"*" r4 c8
+      b8( a) b e,4 e8 | a4^"(*)" e8 c4. | d4 d8 c( d) e | f4^"*" f8 e( d c) |
+      d4. e | a,^"(*)" c | d2.~ | d  \bar "||"
+    }
+
+    \addlyrics {
+      Al -- le -- lu -- ia,
+      Al -- le -- lu -- ia, Al -- le -- lu -- ia,
+      Al -- le -- lu -- ia,
+      Al -- le -- lu -- ia, Al -- le -- lu -- ia,
+      Al -- le -- lu -- ia, Al -- le -- lu -- ia.
+    }
+
+    \header {
+      title = "Alleluia"
+      composer = "David Hogan"
     }
   }
 
@@ -200,6 +225,35 @@
   }
 
   \markup {}
+  \tocItem "Bubbling and Splashing"
+  \score {
+    \transpose c aes \relative c' {
+      \key c \major
+      \time 6/8
+      c8 c c b b b | a a a g8. f16 e8 | \break
+      f f f e8. d16 c8 | g'8. f16 g8 c,4 c8 | \break
+      c^"*" c c g' g g | a a a b g g | \break
+      c b c d c d | e8. f16 d8 e4 e8 | \break
+      e^"*" e e d8. c16 b8 | c c c b8. a16 g8 | \break
+      a g a g8. f16 e8 | c'8. d16 b8 c4. \bar "||"
+    }
+
+    \addlyrics {
+      Bub -- bling and splash -- ing and foam -- ing and dash -- ing
+      with noise and with bust -- le the brook rush -- es by,
+      But si -- lent and slow does the deep ri -- ver flow
+      on the smooth glass -- y sur -- face re -- flect -- ing the sky!
+      Thus shal -- ow pre -- tense bab -- bles on with -- out sense
+      while true know -- ledge and wis -- dom sit qui -- et -- ly by!
+    }
+
+    \header {
+      title = "Bubbling and Splashing"
+      composer = "Henry Purcell"
+    }
+  }
+
+  \markup {}
   \tocItem "By the Waters of Babylon"
   \score {
     \transpose d a \relative c' {
@@ -217,7 +271,7 @@
       We lay down and wept, and wept, for thee, Zi -- on:
       We re -- mem -- ber, we re -- mem -- ber, we re -- mem -- ber thee, Zi -- on!
     }
-    
+
     \header {
       title = "By the Waters of Babylon"
       poet = "Biblical"
@@ -367,16 +421,16 @@
     }
 
     \addlyrics {
-      Fie, nay pri -- thee, John, do not quar -- rel, man; 
+      Fie, nay pri -- thee, John, do not quar -- rel, man;
       let's be mer -- ry and drink a bout!
-      You're a rogue; you cheat -- ed me, I'll prove 
-      be -- fore this com -- pa -- ny; I caren't a far -- thing, 
+      You're a rogue; you cheat -- ed me, I'll prove
+      be -- fore this com -- pa -- ny; I caren't a far -- thing,
       sir, for all you are so stout!
-      Sir, you lie, I scorn your word, or an -- y man 
-      who wears a sword; for all your huff, 
+      Sir, you lie, I scorn your word, or an -- y man
+      who wears a sword; for all your huff,
       who cares a damn, and who cares for you?
     }
-    
+
     \header {
       title = "Fie, nay Prithee, John"
       composer = "Henry Purcell"
@@ -606,6 +660,45 @@
     }
   }
 
+  \tocItem "Little Genius"
+  \score {
+    \relative c'' {
+      \key c \major
+      \time 4/4
+      g8. g16 g g g g e8 c r4 | g'8. g16 g g g g e8 c r16 c b c | \break
+      a'4 r16 c, b c g'4 r16 c, c c | d8 a' g b, c16 c c c c c c c | \break
+      b8^"*" g r4 r16 c c c c c c c | b8 g r4 r16 c c c e4 | \break
+      r16 c c c f4 r16 c c c e c c c | g8 g g g c4 r16 c d e | \break
+      f8.^"*" d16 a b a b c4 r16 c d e | f8. d16 a b a b c8 c c'4 | \break
+      r8 c, c'4 r8 f, e16 d c b | a8 f' e d c4 r8 c | \break
+      d8.^"*" e16 f8. d16 c d e8 r c | d8. e16 f8. d16 c d e8 g c, | \break
+      r4 a'8 c, r4 g'8 c, | r8 d e f e4 r \bar "||"
+    }
+
+    \addlyrics {
+      Here we have a lit -- tle gen -- ius,
+      Now we call him A -- mau -- de -- us,
+      He used to be Mo -- zart to me
+      But now we use his mid -- dle name!
+      Oh yes he had to be a big shot,
+      A pr -- pre -- co -- scious lit -- tle big shot,
+      They made a flick and he got sick,
+      To Sal -- i -- er -- i was att -- rib -- u -- ted the blame.
+      And then he wrote his fam -- ous re -- qui -- em
+      To which he nev -- er wrote the last A -- men.
+      A -- men! A -- men! Oh wait, we have
+      a -- noth -- er verse to do.
+      This Mo -- zart craze is al -- most through,
+      Soon Hol -- ly -- wood must look a -- new,
+      Hay -- den, Cho -- pin, Bar -- tok, or may -- be Crumb.
+    }
+
+    \header {
+      title = "Little Genius"
+      composer = "W.A. Mozart (lyrics unknown)"
+    }
+  }
+
   \markup {}
   \tocItem "My Friend Sharon"
   \score {
@@ -634,7 +727,7 @@
       composer = "Jan Harmon"
     }
   }
-  
+
   \markup {}
   \tocItem "Noah's Dove"
   \score {
@@ -657,10 +750,33 @@
       I would fly a -- way to the one I love
       I would fly a -- way to the one I love.
     }
-    
+
     \header {
       title = "Noah's Dove"
       composer = "Unknown"
+    }
+  }
+
+  \markup {}
+  \tocItem "Non nobis, Domine"
+  \score {
+    \relative c' {
+      \key c \major
+      \time 2/2
+      c2 d4^"* (at 5th)" e | f4. f8 e4^"* (at 8va)" e | d2 c | r4 g' a8 a f4 |
+      c'2 c4 bes | a4. a8 g2 | r4 d e8 e c4 |
+      g'2 g4 f | e4. e8 d2 \bar "||"
+    }
+
+    \addlyrics {
+      Non no -- bis Do -- mi -- ne, non no -- bis,
+      sed no -- mi -- ni tu -- o da glo -- ri -- am,
+      sed no -- mi -- ni tu -- o da glo -- ri -- am.
+    }
+
+    \header {
+      title = "Non nobis, Domine"
+      composer = "William Byrd?"
     }
   }
 
@@ -734,7 +850,7 @@
       Rise up, O flame; by thy light glow -- ing
       Show to us beau -- ty, vis -- ion and joy.
     }
-    
+
     \header {
       title = "Rise Up, O Flame"
       composer = "Christoph Praetorius"
@@ -759,13 +875,13 @@
       I'll sit by the fire, and drink a toast to all of you–
       Fare -- well, I must be gone...
     }
-    
+
     \header {
       title = "The Road"
       composer = "John Krumm"
     }
   }
-  
+
   \markup {}
   \tocItem "Rose, Rose / Ah! Poor Bird / Hey, Ho / Shalom Chaverim (Quodlibet)"
   \score {
@@ -803,13 +919,37 @@
 
       Sha -- lom cha -- ver -- im, sha -- lom cha -- ver -- im,
       Sha -- lom, sha -- lom,
-      L' -- hit -- ra -- ot, l' -- hit -- ra -- ot, 
+      L' -- hit -- ra -- ot, l' -- hit -- ra -- ot,
       Sha -- lom, sha -- lom.
     }
-    
+
     \header {
       title = "Rose, Rose / Ah! Poor Bird / Hey, Ho / Shalom Chaverim"
       composer = "Traditional"
+    }
+  }
+
+  \markup {}
+  \tocItem "Sanctus"
+  \score {
+    \transpose c f \relative c'' {
+      \key c \major
+      \time 2/2
+      g4. f8 e4 d | c4 b a2 | g2.^"*" g4 | c4 d e d8 c |
+      d2^"*" c4 g' | a4 g~ g f8 e | f4^"*" d g4. f8 | e4 d~ d c~ |
+      c4^"*" b c4. d8 | e8 f g4 c, r \bar "||"
+    }
+
+    \addlyrics {
+      San -- _ _ _ _ _ _ ctus!
+      San -- _ _ _ _ _ _ ctus!
+      San -- _ _ _ _ _ _ _ _ _ _ _ _ ctus!
+      San -- _ _ _ ctus!
+    }
+
+    \header {
+      title = "Sanctus"
+      composer = "Clemens non Papa"
     }
   }
 
@@ -831,7 +971,7 @@
       For three days
       Like we have!
     }
-    
+
     \header {
       title = "Scalloped Potatoes"
       composer = "Unknown"
@@ -966,7 +1106,7 @@
       Will we hear the sea -- sons pulse,
       And find the heart's beat is but an e -- cho?
     }
-    
+
     \header {
       title = "When we Learn the Language of Trees"
       composer = "Jonathan Gilbert"
