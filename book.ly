@@ -446,7 +446,7 @@
       e4. d8 c4 | b2 c4 | a4. gis8 a4 | gis2 e'8 d |
       f4. e8 d4 | b2 c4 | a4. b8 gis4 | a2. | \break
       a4.^"*" b8 c( a) | e'2 e4 | e4.( f8) d4 | e4. c8 c4 |
-      a4. a8 f'4 | d4. g8 e4 | c4. d8 b4 | a2. | \break
+      a4. a8 f'4 | d2 g8 e | c4. d8 b4 | a2. | \break
       e'4. d8 c4 | b2 c4 | a4. c8 b( a) | gis2 a8 a |
       d,4. e8 f d | g4. f8 e4 | f4. d8 e4 | a2. \bar "||"
     }
