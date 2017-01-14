@@ -1,6 +1,7 @@
 \version "2.14.2"
 
 %TODO -- add Hineh mah tov, Ego Sum Pauper
+%TODO(maia) -- add O Lord Turn Not Away Thy, Nice Cup of Tea
 
 \layout { indent = 0.0\cm }
 
@@ -351,6 +352,37 @@
   }
 
   \markup {}
+  \tocItem "Darkness Is Falling"
+  \score {
+    \relative c' {
+      \key a \minor
+      \time 4/4
+      a4 b8 c d4 c8 b | a4 b8 c d4 c8 b |
+      a4 b8 c d4 c8 d | e4 c8 a e'2 | \break
+      e4^"*" a f e8 d | e4 a f e8 d |
+      e4( gis8) a b4( a8 b) | c4 a8 e c'2 | \break
+      c^"*" a | c a |
+      c4 b8 e, g4 f8( g) | a1 \bar "||"
+    }
+
+    \addlyrics {
+      Dark -- ness is fall -- ing,
+      the moon will be ris -- ing,
+      the stars will be shin -- ing,
+      the sun's gone to sleep;
+      Close your eyes and I'll
+      rock you gent -- ly and
+      whis -- per sweet dreams while you sleep;
+      Good -- night, good -- night,
+      now it is time to sleep.
+    }
+
+    \header {
+      title = "Darkness Is Falling"
+    }
+  }
+
+  \markup {}
   \tocItem "Dona Nobis (Schickele)"
   \score {
     \relative c' {
@@ -677,11 +709,11 @@
 
     \addlyrics {
       Here we have a lit -- tle gen -- ius,
-      Now we call him A -- mau -- de -- us,
+      Now we call him A -- ma -- de -- us,
       He used to be Mo -- zart to me
       But now we use his mid -- dle name!
       Oh yes he had to be a big shot,
-      A pr -- pre -- co -- scious lit -- tle big shot,
+      A pr -- pre -- co -- cious lit -- tle big shot,
       They made a flick and he got sick,
       To Sal -- i -- er -- i was att -- rib -- u -- ted the blame.
       And then he wrote his fam -- ous re -- qui -- em
@@ -690,7 +722,7 @@
       a -- noth -- er verse to do.
       This Mo -- zart craze is al -- most through,
       Soon Hol -- ly -- wood must look a -- new,
-      Hay -- den, Cho -- pin, Bar -- tok, or may -- be Crumb.
+      Hay -- dn, Cho -- pin, Bar -- tók, or may -- be Crumb.
     }
 
     \header {
@@ -763,7 +795,7 @@
     \relative c' {
       \key c \major
       \time 2/2
-      c2 d4^"* (at 5th)" e | f4. f8 e4^"* (at 8va)" e | d2 c | r4 g' a8 a f4 |
+      c2 d4^"* (5th below)" e | f4. f8 e4^"* (oct. below)" e | d2 c | r4 g' a8 a f4 |
       c'2 c4 bes | a4. a8 g2 | r4 d e8 e c4 |
       g'2 g4 f | e4. e8 d2 \bar "||"
     }
@@ -805,6 +837,35 @@
       title = "The Old Astronomer to his Pupil"
       composer = "Franz Josef Haydn (1732-1809)"
       poet = "Sarah Williams (1841-1868)"
+    }
+  }
+
+  \markup {}
+  \tocItem "O Absalon My Son"
+  \score {
+    \transpose a fis \relative a' {
+      \key a \minor
+      \time 2/2
+      a2 b4. b8 | c4 b a d, | e1 |
+      a2 b4. b8 | c4 c, d e | e2. e8 e | \break
+      a2.^"*" g8 f | e4 d d'8( c) b( a) | gis2. e8 e |
+      a2. g8 f | e4 a c b | c1 | \break
+      c,2^"*" d4. d8 | e4 f f8( e) d( c) | b1 |
+      c2 d4. d8 | e4 e a gis | a1 \bar "||"
+    }
+
+    \addlyrics {
+      O Ab -- sa -- lon my son, my son.
+      O Ab -- sa -- lon my son, my son.
+      Would to God I had died for thee my son.
+      Would to God I had died for thee my son.
+      O Ab -- sa -- lon my son, my son.
+      O Ab -- sa -- lon my son, my son.
+    }
+
+    \header {
+      title = "O Absalon My Son"
+      composer = "Charles King (1687-1748)"
     }
   }
 
@@ -998,6 +1059,35 @@
     \header {
       title = "Stand Still"
       composer = "William Lawes"
+    }
+  }
+
+  \markup {}
+  \tocItem "This Pretty Planet"
+  \score {
+    \transpose c e \relative c' {
+      \key c \major
+      \time 4/4
+      g8 c d d~ d e4. | a,8 d e f~ f4. f8 |
+      e d r f e d r d | d4 c8 c~ c2 | \break
+      g'2^"*" g | g8 f e d~ d2 |
+      d8 c b b~ b b4. | a8 b c g~ g2 | \break
+      e'^"*" g,4 e' | a,1 |
+      g2 g4. f'8 | f4 e8 e~ e2 \bar "||"
+    }
+
+    \addlyrics {
+      This pret -- ty plan -- et, spinn -- ing through space,
+      your gar -- den, your har -- bor, your ho -- ly place.
+      Gold -- en sun go -- ing down,
+      gen -- tle blue gi -- ant, spin us a -- round.
+      All through the night,
+      safe 'till the morn -- ing light.
+    }
+
+    \header {
+      title = "This Pretty Planet"
+      composer = "Tom Chapin"
     }
   }
 
