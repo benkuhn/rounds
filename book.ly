@@ -200,6 +200,50 @@
   }
 
   \markup {}
+  \tocItem "Los Bibilicos"
+  \score {
+    \relative c' {
+      \key d \dorian
+      \time 2/2
+      \partial 2
+      d4 d | d e d( c) | e2 d | f4( g) a a | c( b) a g | b2 a |
+      d4 c d a | g( c) b2 | a f4 g | c a g c | d f e2 | d \bar "||" \break
+
+      d,4^"*" f | g a g( f) | e2 d ~ | d d4 a | f' e d( c) | g'2 e ~ |
+      e d4 f | g a g( f) | e2 d ~ | d e4 g | a bes a g | a2 \bar "||" \break
+
+      % small notes down an octave
+      << { \voiceOne a4^"*" a | a a a2 | g a }
+         \new Voice { \voiceTwo \teeny a,4 a | a a a2 | g a  }
+      >> \oneVoice |
+      d4( e) f f | a( g) f e | d2 cis |
+      d4 e f f | g( f) e2 | e f4 e | e d c c | d d cis2 | d \bar "|."
+    }
+
+    \addlyrics {
+      Los bi -- bi -- li -- cos can -- tan
+      en los ar -- bo -- les de la flor.
+      Los bi -- bi -- li -- cos can -- tan
+      mien -- tras que sue -- no de paz y a -- mor.
+
+      Los bi -- bi -- li -- cos can -- tan.
+      Los bi -- bi -- li -- cos can -- tan.
+      Los bi -- bi -- li -- cos can -- tan.
+      Sue -- no de paz y a -- mor.
+
+      Los bi -- bi -- li -- cos can -- tan
+      en los ar -- bo -- les de la flor.
+      Los bi -- bi -- li -- cos can -- tan
+      mien -- tras que sue -- no de paz y a -- mor.
+    }
+
+    \header {
+      title = "Los Bibilicos"
+      composer = "Jan Harmon"
+    }
+  }
+
+  \markup {}
   \tocItem "Blessed are We"
   \score {
     \transpose a d \relative c'' {
@@ -645,50 +689,6 @@
     \header {
       title = "Jubilate Deo"
       composer = "Michael Praetorius"
-    }
-  }
-
-  \markup {}
-  \tocItem "Los Bibilicos"
-  \score {
-    \relative c' {
-      \key d \dorian
-      \time 2/2
-      \partial 2
-      d4 d | d e d( c) | e2 d | f4( g) a a | c( b) a g | b2 a |
-      d4 c d a | g( c) b2 | a f4 g | c a g c | d f e2 | d \bar "||" \break
-
-      d,4^"*" f | g a g( f) | e2 d ~ | d d4 a | f' e d( c) | g'2 e ~ |
-      e d4 f | g a g( f) | e2 d ~ | d e4 g | a bes a g | a2 \bar "||" \break
-
-      % small notes down an octave
-      << { \voiceOne a4^"*" a | a a a2 | g a }
-         \new Voice { \voiceTwo \teeny a,4 a | a a a2 | g a  }
-      >> \oneVoice |
-      d4( e) f f | a( g) f e | d2 cis |
-      d4 e f f | g( f) e2 | e f4 e | e d c c | d d cis2 | d \bar "|."
-    }
-
-    \addlyrics {
-      Los bi -- bi -- li -- cos can -- tan
-      en los ar -- bo -- les de la flor.
-      Los bi -- bi -- li -- cos can -- tan
-      mien -- tras que sue -- no de paz y a -- mor.
-
-      Los bi -- bi -- li -- cos can -- tan.
-      Los bi -- bi -- li -- cos can -- tan.
-      Los bi -- bi -- li -- cos can -- tan.
-      Sue -- no de paz y a -- mor.
-
-      Los bi -- bi -- li -- cos can -- tan
-      en los ar -- bo -- les de la flor.
-      Los bi -- bi -- li -- cos can -- tan
-      mien -- tras que sue -- no de paz y a -- mor.
-    }
-
-    \header {
-      title = "Los Bibilicos"
-      composer = "Jan Harmon"
     }
   }
 
