@@ -1,6 +1,11 @@
 \version "2.14.2"
 
-%TODO -- add Hineh mah tov, Ego Sum Pauper
+%TODO
+% - Hineh mah tov
+% - Ego Sum Pauper
+% - Hard Winter (Jan Harmon) - http://harmonpublishing.com/jan/songs/music/hard_winter-04nov07.pdf
+% - on a gray and misty mornig (Krumm)
+% - o how lovely is the evening
 
 \layout { indent = 0.0\cm }
 
