@@ -107,8 +107,8 @@
       \key a \minor
       \time 6/8
       d4.^"In 3 or 6 parts" a' | g c, | f8^"(*)"( e) d e4 c8 | b4 d8 g4. | a4.^"*" r4 c8
-      b8( a) b e,4 e8 | a4^"(*)" e8 c4. | d4 d8 c( d) e | f4^"*" f8 e( d c) |
-      d4. e | a,^"(*)" c | d2.~ | d  \bar "||"
+      b8( a) b e,4 e8 | a4^"(*)" f8 c4. | d4 d8 c( d) e | f4^"*" f8 e( d c) |
+      d4. e | a,^"(*)" c | d2.  \bar "||"
     }
 
     \addlyrics {
