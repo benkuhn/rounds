@@ -1006,6 +1006,43 @@
   }
 
   \markup {}
+  \tocItem "Rain Is Comin' Down"
+  \score {
+    \transpose c as \relative c' {
+        \key c \major
+        \time 2/2
+        \set Timing.beamExceptions = #'()
+        \set Timing.baseMoment = #(ly:make-moment 1/4)
+        c8( b c g a4.) a8 | g f e g~ g g4. |
+        c8( b c g a4.) a8 | c b4 g8~ g2 |
+
+
+        g4 g r c, | r c'8 b~ b c4. |
+        g8( f g4) c8( b c) g | g f4 e8~ e2 |
+
+
+        e'8( d e c f4.) f8 | e d c d~ d e4.
+        e8( d e c f4.) f8 | e d4 c8~ c2 \bar "||"
+    }
+
+    \addlyrics {
+      Rain __ is com -- in' down, com -- in'.
+      Rain __ is com -- in' down.
+
+      Rain, rain, rain is com -- in'.
+      Rain, __ rain __ is com -- in' down.
+
+      Rain __ is com -- in' down, com -- in'.
+      Rain __ is com -- in' down.
+    }
+
+    \header {
+      title = "Rain Is Comin' Down"
+      composer = "??"
+    }
+  }
+
+  \markup {}
   \tocItem "Rose, Rose / Ah! Poor Bird / Hey, Ho / Shalom Chaverim (Quodlibet)"
   \score {
     \transpose a d \relative a' {
