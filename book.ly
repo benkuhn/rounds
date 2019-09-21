@@ -107,8 +107,8 @@
       \key a \minor
       \time 6/8
       d4.^"In 3 or 6 parts" a' | g c, | f8^"(*)"( e) d e4 c8 | b4 d8 g4. | a4.^"*" r4 c8
-      b8( a) b e,4 e8 | a4^"(*)" e8 c4. | d4 d8 c( d) e | f4^"*" f8 e( d c) |
-      d4. e | a,^"(*)" c | d2.~ | d  \bar "||"
+      b8( a) b e,4 e8 | a4^"(*)" f8 c4. | d4 d8 c( d) e | f4^"*" f8 e( d c) |
+      d4. e | a,^"(*)" c | d2.  \bar "||"
     }
 
     \addlyrics {
@@ -631,6 +631,64 @@
   }
 
   \markup {}
+  \tocItem "The Interval Canon"
+  \score{
+    \transpose c d \relative c' {
+      \key c \major
+      \time 4/4
+      % Third
+      c8-. c-. e-. e-. g-. g-. e4-- | f8-. f-. d16-. d-. d8-. b-. b-. g4-- | \break
+
+      % Second
+      c16^"*"( d) e f g( a) b c c,( d) e f g8. g16 |
+      f( g) f( g) f( g) f( g) f g f8 g8. g16 | \break
+
+      % Fourth
+      c8.^"*" c16 g8. g16 c c c c g8 g16 g | d d d d g8. g16 d d d d g4 | \break
+
+      % Fifth
+      r16^"*" g g g c, c c8 r g' c,[ r16 c] |
+      d8 d16 d g, g g8 r d' \tuplet 3/2 { g,4 g8 } | \break
+
+      % Sixth
+      e'4~^"*" \tuplet 3/2 4 { e8 g, e' e g, e' e dis e } |
+      g4~ \tuplet 3/2 { g8 f e } d4~ \tuplet 3/2 { d4 g,8 } | \break
+      e'4~ \tuplet 3/2 4 { e8 g, e' e g, e' e dis e } |
+      g4~ \tuplet 3/2 { g8 f e } d4~ d8. g,32 g | \break
+
+      % Octave, seventh
+      c8^"*"[ r16 c32 c] g'8[ r16 a32 b] c8-> c,-> r g'16 g |
+      f16[ f e\rest g,] f'16[ f e\rest g,] f'8 g, r4 \bar "||"
+
+    }
+
+    \addlyrics {
+      If you're look -- ing for a third,
+      Hay -- dn sym -- pho -- nies should be heard;
+
+      Se -- conds are eas -- y but not in a trill,
+      to sing one fast re -- qui -- res great skill;
+
+      In math a fourth is small -- er than a third
+      but in mu -- sic that i -- dea would simp -- ly be ab -- surd;
+
+      This is the in -- ter -- val where -- with
+      the strings tune their in -- strum -- ents, the fifth;
+
+      A sixth is a third up -- side -- down so it's eas -- y to find,
+      re -- call -- ing the clink of the drink -- ing songs Ver -- di de -- signed;
+
+      Add a fourth to a fifth for an oct -- ave,
+      but the sev -- enth is much more pro -- voc' -- tive.
+
+    }
+
+    \header {
+      title = "The Interval Canon"
+    }
+  }
+
+  \markup {}
   \tocItem "Jubilate Deo"
   \score {
     \relative c'' {
@@ -944,6 +1002,43 @@
     \header {
       title = "The Road"
       composer = "John Krumm"
+    }
+  }
+
+  \markup {}
+  \tocItem "Rain Is Comin' Down"
+  \score {
+    \transpose c as \relative c' {
+        \key c \major
+        \time 2/2
+        \set Timing.beamExceptions = #'()
+        \set Timing.baseMoment = #(ly:make-moment 1/4)
+        c8( b c g a4.) a8 | g f e g~ g g4. |
+        c8( b c g a4.) a8 | c b4 g8~ g2 |
+
+
+        g4 g r c, | r c'8 b~ b c4. |
+        g8( f g4) c8( b c) g | g f4 e8~ e2 |
+
+
+        e'8( d e c f4.) f8 | e d c d~ d e4.
+        e8( d e c f4.) f8 | e d4 c8~ c2 \bar "||"
+    }
+
+    \addlyrics {
+      Rain __ is com -- in' down, com -- in'.
+      Rain __ is com -- in' down.
+
+      Rain, rain, rain is com -- in'.
+      Rain, __ rain __ is com -- in' down.
+
+      Rain __ is com -- in' down, com -- in'.
+      Rain __ is com -- in' down.
+    }
+
+    \header {
+      title = "Rain Is Comin' Down"
+      composer = "??"
     }
   }
 
