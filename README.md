@@ -1,9 +1,7 @@
 This is a book of my favorite rounds, suitable for running off enough
 copies for a singing party.
 
-## Download
-
-You can download a PDF [here](https://github.com/benkuhn/rounds/releases/latest).
+## [PDF download link](https://github.com/benkuhn/rounds/releases/latest)
 
 ## User's notes
 
