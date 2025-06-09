@@ -995,6 +995,29 @@
   }
 
   \markup {}
+  \tocItem "Round and Round the Earth is Turning"
+  \score {
+    \relative a {
+      \key a \minor
+      \time 4/4
+      d4 d a' a | g8 f e4 d d |
+      a'^"*" a c c | b8 a g4 a a |
+      g^"*" e f g | e8 d c4 d2
+    }
+
+    \addlyrics {
+      Round and round the earth _ is tur -- ning,
+      Tur -- ning al -- ways round _ to mor -- ning,
+      And from mor -- ning round _ to night.
+    }
+
+    \header {
+      title = "Round and Round the Earth is Turning"
+      composer = "Traditional"
+    }
+  }
+
+  \markup {}
   \tocItem "Sanctus"
   \score {
     \transpose c f \relative c'' {
