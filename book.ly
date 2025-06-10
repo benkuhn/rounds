@@ -31,7 +31,8 @@
     }
   }
   tocItemMarkup = \markup \large \fill-line {
-    \fromproperty #'toc:text \fromproperty #'toc:page
+    \fromproperty #'toc:text
+    \fromproperty #'toc:page
   }
   ragged-last-bottom = ##t
 }
@@ -42,13 +43,32 @@
   }
 }
 
+#(define round-counter 0)
+
+roundTocItem = 
+#(define-music-function (parser location title difficulty parts) (string? string? string?)
+   (set! round-counter (+ round-counter 1))
+   (let ((label (string->symbol (string-append "round-" (number->string round-counter)))))
+     #{
+       \tocItem \markup {
+         \fill-line {
+           \line { 
+             #title 
+             \italic \concat { "(" #difficulty ", " #parts " parts)" } 
+           }
+           \page-ref #label "0" "?"
+         }
+       }
+       \label #label
+     #}))
+
 \book {
 
   \markuplist { \table-of-contents }
   \pageBreak
 
   \markup {}
-  \tocItem "Ah, Comme C'est Chose et Belle"
+  \roundTocItem "Ah, Comme C'est Chose et Belle" "Hard" "5"
   \score {
     \transpose a d \relative a' {
       \key a \minor
@@ -75,7 +95,7 @@
   }
 
   \markup{}
-  \tocItem "All Praise to Thee"
+  \roundTocItem "All Praise to Thee" "Easy" "4 or 8"
   \score {
     \transpose c f \relative c' {
       \key c \major
@@ -101,7 +121,7 @@
   }
 
   \markup {}
-  \tocItem "Alleluia"
+  \roundTocItem "Alleluia" "Medium" "3 or 6"
   \score {
     \relative c' {
       \key a \minor
@@ -126,7 +146,7 @@
   }
 
   \markup{}
-  \tocItem "Appalachian Round"
+  \roundTocItem "Appalachian Round" "Hard" "4"
   \score {
     \transpose a g \relative c' {
       \key a \dorian
@@ -157,7 +177,7 @@
   }
 
   \markup {}
-  \tocItem "Alleluia"
+  \roundTocItem "Alleluia" "Medium" "3"
   \score {
     \relative c'' {
       c1 | b | a | g | a2. b4 | c8( b a g a g f e | f2 g) | c,1 | \break
@@ -178,7 +198,7 @@
   }
 
   \markup {}
-  \tocItem "Be Like a Bird"
+  \roundTocItem "Be Like a Bird" "Hard" "2+"
   \score {
     \relative c' {
       \key a \minor
@@ -204,7 +224,7 @@
   }
 
   \markup {}
-  \tocItem "Blessed are We"
+  \roundTocItem "Blessed are We" "Medium" "3"
   \score {
     \transpose a d \relative c'' {
       \key a \minor
@@ -230,7 +250,7 @@
   }
 
   \markup {}
-  \tocItem "Bubbling and Splashing"
+  \roundTocItem "Bubbling and Splashing" "Medium" "3"
   \score {
     \transpose c aes \relative c' {
       \key c \major
@@ -259,7 +279,7 @@
   }
 
   \markup {}
-  \tocItem "By the Waters of Babylon"
+  \roundTocItem "By the Waters of Babylon" "Hard" "3"
   \score {
     \transpose d a \relative c' {
       \key d \minor
@@ -285,7 +305,7 @@
   }
 
   \markup {}
-  \tocItem "Die Blumen"
+  \roundTocItem "Die Blumen" "Medium" "3"
   \score {
     \relative c' {
       \key a \minor
@@ -310,7 +330,7 @@
   }
 
   \markup {}
-  \tocItem "Come, Follow, Follow"
+  \roundTocItem "Come, Follow, Follow" "Medium" "3"
   \score {
     \relative c' {
       \key c \major
@@ -336,7 +356,7 @@
   }
 
   \markup {}
-  \tocItem "Cuckoo"
+  \roundTocItem "Cuckoo" "Easy" "4"
   \score {
     \relative f' {
       \key f \major
@@ -356,7 +376,7 @@
   }
 
   \markup {}
-  \tocItem "Darkness Is Falling"
+  \roundTocItem "Darkness Is Falling" "Medium" "3"
   \score {
     \relative c' {
       \key a \minor
@@ -387,7 +407,7 @@
   }
 
   \markup {}
-  \tocItem "Dona Nobis (Schickele)"
+  \roundTocItem "Dona Nobis (Schickele)" "Expert" "4"
   \score {
     \relative c' {
       \key f \major
@@ -417,7 +437,7 @@
   }
 
   \markup {}
-  \tocItem "Dona Nobis (traditional)"
+  \roundTocItem "Dona Nobis (traditional)" "Medium" "3"
   \score {
     \relative c' {
       \key f \major
@@ -446,7 +466,7 @@
   }
 
   \markup {}
-  \tocItem "Fie, nay Prithee, John"
+  \roundTocItem "Fie, nay Prithee, John" "Hard" "3"
   \score {
     \relative g' {
       \key g \major
@@ -474,7 +494,7 @@
   }
 
   \markup {}
-  \tocItem "Gabriel John"
+  \roundTocItem "Gabriel John" "Medium" "3"
   \score {
     \transpose a e' \relative a' {
       \key a \minor
@@ -505,7 +525,7 @@
   }
 
   \markup {}
-  \tocItem "Good Friend"
+  \roundTocItem "Good Friend" "Medium" "4"
   \score {
     \relative a {
       \key a \minor
@@ -534,7 +554,7 @@
   }
 
   \markup {}
-  \tocItem "Hava Nashira"
+  \roundTocItem "Hava Nashira" "Easy" "3"
   \score {
     \relative c' {
       \key c \major
@@ -557,7 +577,7 @@
   }
 
   \markup {}
-  \tocItem "Happy Birthday"
+  \roundTocItem "Happy Birthday" "Medium" "3"
   \score {
     \transpose c f \relative c' {
       \key c \major
@@ -582,7 +602,7 @@
   }
 
   \markup {}
-  \tocItem "Hotaru Koi"
+  \roundTocItem "Hotaru Koi" "Hard" "3+"
   \score {
     \relative a' {
       \key a \minor
@@ -607,7 +627,7 @@
   }
 
   \markup {}
-  \tocItem "Hymn for the Russian Earth"
+  \roundTocItem "Hymn for the Russian Earth" "Medium" "4"
   \score {
     \relative d' {
       \key d \minor
@@ -631,7 +651,7 @@
   }
 
   \markup {}
-  \tocItem "Jubilate Deo"
+  \roundTocItem "Jubilate Deo" "Easy" "3"
   \score {
     \relative c'' {
       \key c \major
@@ -653,7 +673,7 @@
   }
 
   \markup {}
-  \tocItem "Los Bibilicos"
+  \roundTocItem "Los Bibilicos" "Hard" "3"
   \score {
     \relative c' {
       \key d \dorian
@@ -696,7 +716,7 @@
     }
   }
 
-  \tocItem "Little Genius"
+  \roundTocItem "Little Genius" "Medium" "4"
   \score {
     \relative c'' {
       \key c \major
@@ -736,7 +756,7 @@
   }
 
   \markup {}
-  \tocItem "My Friend Sharon"
+  \roundTocItem "My Friend Sharon" "Hard" "4"
   \score {
     \relative c' {
       \key f \major
@@ -765,7 +785,7 @@
   }
 
   \markup {}
-  \tocItem "Noah's Dove"
+  \roundTocItem "Noah's Dove" "Hard" "3"
   \score {
     \relative c' {
       \key c \major
@@ -794,7 +814,7 @@
   }
 
   \markup {}
-  \tocItem "Non nobis, Domine"
+  \roundTocItem "Non nobis, Domine" "Hard" "3"
   \score {
     \relative c' {
       \key c \major
@@ -817,7 +837,7 @@
   }
 
   \markup {}
-  \tocItem "The Old Astronomer to his Pupil"
+  \roundTocItem "The Old Astronomer to his Pupil" "Medium" "5"
   \score {
     \relative a {
       \key a \minor
@@ -845,7 +865,7 @@
   }
 
   \markup {}
-  \tocItem "O Absalon My Son"
+  \roundTocItem "O Absalon My Son" "Hard" "3"
   \score {
     \transpose a fis \relative a' {
       \key a \minor
@@ -874,7 +894,7 @@
   }
 
   \markup {}
-  \tocItem "Onawa's Waltz"
+  \roundTocItem "Onawa's Waltz" "Hard" "3"
   \score {
     \transpose c f \relative c' {
       \key c \major
@@ -903,7 +923,7 @@
   }
 
   \markup {}
-  \tocItem "Rise Up, O Flame"
+  \roundTocItem "Rise Up, O Flame" "Easy" "2 - 8"
   \score {
     \relative d' {
       \time 3/4
@@ -923,7 +943,7 @@
   }
 
   \markup {}
-  \tocItem "The Road"
+  \roundTocItem "The Road" "Medium" "4"
   \score {
     \relative c' {
       \key f \major
@@ -995,7 +1015,7 @@
   }
 
   \markup {}
-  \tocItem "Round and Round the Earth is Turning"
+  \roundTocItem "Round and Round the Earth is Turning" "Medium" "3"
   \score {
     \relative a {
       \key a \minor
@@ -1018,7 +1038,7 @@
   }
 
   \markup {}
-  \tocItem "Sanctus"
+  \roundTocItem "Sanctus" "Hard" "5"
   \score {
     \transpose c f \relative c'' {
       \key c \major
@@ -1042,7 +1062,7 @@
   }
 
   \markup {}
-  \tocItem "Scalloped Potatoes"
+  \roundTocItem "Scalloped Potatoes" "Easy" "4"
   \score {
     \transpose d e \relative d' {
       \key d \minor
@@ -1067,7 +1087,7 @@
   }
 
   \markup {}
-  \tocItem "Stand Still"
+  \roundTocItem "Stand Still" "Hard" "3"
   \score {
     \relative c'' {
       \key a \minor
@@ -1090,7 +1110,7 @@
   }
 
   \markup {}
-  \tocItem "This Pretty Planet"
+  \roundTocItem "This Pretty Planet" "Medium" "3"
   \score {
     \transpose c e \relative c' {
       \key c \major
@@ -1119,7 +1139,7 @@
   }
 
   \markup {}
-  \tocItem "Together Again"
+  \roundTocItem "Together Again" "Hard" "3"
   \score {
     \transpose c g \relative c' {
       \key c \major
@@ -1146,7 +1166,7 @@
   }
 
   \markup {}
-  \tocItem "When Jesus Wept"
+  \roundTocItem "When Jesus Wept" "Medium" "4"
   \score {
     \relative d' {
       \key d \minor
@@ -1171,7 +1191,7 @@
   }
 
   \markup {}
-  \tocItem "The Water Spout"
+  \roundTocItem "The Water Spout" "Medium" "4"
   \score {
     \transpose c f \relative c' {
       \key c \major
@@ -1204,7 +1224,7 @@
   }
 
   \markup {}
-  \tocItem "When we Learn the Language of Trees"
+  \roundTocItem "When we Learn the Language of Trees" "Hard" "6"
   \score {
     \transpose c d \relative c' {
       \key g \minor
@@ -1232,7 +1252,7 @@
   }
 
   \markup {}
-  \tocItem "White Sand and Grey Sand"
+  \roundTocItem "White Sand and Grey Sand" "Warmup" "3"
   \score {
     \transpose c g \relative c' {
       \key c \major
