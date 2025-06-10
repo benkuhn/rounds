@@ -32,7 +32,7 @@
   }
   tocItemMarkup = \markup \large \fill-line {
     \fromproperty #'toc:text
-    \fromproperty #'toc:page
+    \null
   }
   ragged-last-bottom = ##t
 }
@@ -46,22 +46,25 @@
 #(define round-counter 0)
 
 roundTocItem = 
-#(define-void-function (parser location title difficulty parts) (string? string? string?)
+#(define-music-function (parser location title difficulty parts) (string? string? string?)
    (set! round-counter (+ round-counter 1))
-   (let ((label (string->symbol (string-append "round-" (number->string round-counter)))))
-     #{
-       \tocItem \markup {
-         \fill-line {
-           \line { 
-             \pad-to-box #'(0 . 50) #'(0 . 0) #title
-             \pad-to-box #'(0 . 15) #'(0 . 0) \italic #difficulty
-             \italic \concat { #parts " parts" }
-           }
-           \page-ref #label "0" "?"
-         }
-       }
-       \label #label
-     #}))
+   (let* ((label (string->symbol (string-append "round-" (number->string round-counter))))
+          (toc-markup #{
+            \markup {
+              \fill-line {
+                \line {
+                  \pad-to-box #'(0 . 50) #'(0 . 0) #title
+                  \pad-to-box #'(0 . 15) #'(0 . 0) \italic #difficulty
+                  \italic \concat { #parts " parts" }
+                }
+                \concat { \page-ref #label "0" #"" }
+              }
+            }
+          #}))
+     ;; Add the TOC item directly
+     (add-toc-item! 'tocItemMarkup toc-markup)
+     ;; Return only the label
+     #{ \label #label #}))
 
 \book {
 
