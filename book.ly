@@ -46,7 +46,7 @@
 #(define round-counter 0)
 
 roundTocItem = 
-#(define-music-function (parser location title difficulty parts) (string? string? string?)
+#(define-void-function (parser location title difficulty parts) (string? string? string?)
    (set! round-counter (+ round-counter 1))
    (let ((label (string->symbol (string-append "round-" (number->string round-counter)))))
      #{
