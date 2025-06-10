@@ -53,8 +53,9 @@ roundTocItem =
        \tocItem \markup {
          \fill-line {
            \line { 
-             #title 
-             \italic \concat { "(" #difficulty ", " #parts " parts)" } 
+             \pad-to-box #'(0 . 50) #'(0 . 0) #title
+             \pad-to-box #'(0 . 15) #'(0 . 0) \italic #difficulty
+             \italic \concat { #parts " parts" }
            }
            \page-ref #label "0" "?"
          }
