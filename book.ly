@@ -32,6 +32,10 @@
   }
   tocItemMarkup = \markup \large \fill-line {
     \fromproperty #'toc:text
+    \fromproperty #'toc:page
+  }
+  roundTocItemMarkup = \markup \large \fill-line {
+    \fromproperty #'toc:text
     \null
   }
   ragged-last-bottom = ##t
@@ -62,7 +66,7 @@ roundTocItem =
             }
           #}))
      ;; Add the TOC item directly
-     (add-toc-item! 'tocItemMarkup toc-markup)
+     (add-toc-item! 'roundTocItemMarkup toc-markup)
      ;; Return only the label
      #{ \label #label #}))
 
